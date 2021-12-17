@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface WorkoutReposiotry extends JpaRepository<Workout, Integer> {
+public interface WorkoutRepository extends JpaRepository<Workout, Integer> {
 
     // SpEL pozwala na pobranie użytkownka z security context
     @Query("SELECT w FROM Workout w WHERE w.user = ?#{authentication.name}")
